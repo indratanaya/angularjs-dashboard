@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/indratanaya/angularjs-dashboard#readme",
   "dependencies": {
-    "angular": "^1.8.3"
+    "angular": "^1.8.3",
+    "bootstrap": "^5.3.1"
   }
 }
