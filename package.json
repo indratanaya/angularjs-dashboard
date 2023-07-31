@@ -1,0 +1,26 @@
+{
+  "name": "angularjs-dashboard",
+  "version": "1.0.0",
+  "description": "A simple dashboard built using AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/indratanaya/angularjs-dashboard.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "Dashboard"
+  ],
+  "author": "Indra Tanaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/indratanaya/angularjs-dashboard/issues"
+  },
+  "homepage": "https://github.com/indratanaya/angularjs-dashboard#readme",
+  "dependencies": {
+    "angular": "^1.8.3"
+  }
+}
