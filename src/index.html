@@ -9,15 +9,11 @@
     <script src="./lib/angular/angular.min.js"></script>
     <script src="./lib/angular-route/angular-route.min.js"></script>
     <script src="./app.module.js"></script>
+    <script src="./app.config.js"></script>
     <script src="./modules/login-form/login-form.module.js"></script>
     <script src="./modules/login-form/login-form.component.js"></script>
   </head>
-  <body
-    class="d-flex align-items-center justify-content-center"
-    style="height: 100vh"
-  >
-    <login-form class="w-100" style="max-width: 400px"></login-form>
-
+  <body ng-view>
     <script src="./lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
