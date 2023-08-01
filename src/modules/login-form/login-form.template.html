@@ -2,17 +2,20 @@
   <div class="card-header">AngularJS Dashboard</div>
 
   <div class="card-body">
-    <form ng-submit="$ctrl.login()">
+    <form name="loginForm" ng-submit="$ctrl.login()">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
         <input
           type="text"
           class="form-control"
+          ng-class="{'is-invalid': loginForm.username.$invalid && loginForm.username.$dirty}"
           id="username"
+          name="username"
           required
           ng-model="$ctrl.creds.username"
           ng-disabled="$ctrl.submitting"
         />
+        <div class="invalid-feedback">Username cannot be empty.</div>
       </div>
 
       <div class="mb-3">
@@ -20,11 +23,14 @@
         <input
           type="password"
           class="form-control"
+          ng-class="{'is-invalid': loginForm.password.$invalid && loginForm.password.$dirty}"
           id="password"
+          name="password"
           required
           ng-model="$ctrl.creds.password"
           ng-disabled="$ctrl.submitting"
         />
+        <div class="invalid-feedback">Password cannot be empty.</div>
       </div>
 
       <button
