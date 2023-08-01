@@ -1,3 +1,3 @@
 "use strict";
 
-angular.module("app", ["loginForm"]);
+angular.module("app", ["ngRoute", "loginForm"]);
