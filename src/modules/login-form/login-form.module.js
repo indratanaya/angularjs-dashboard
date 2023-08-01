@@ -3,17 +3,19 @@
 angular.module("loginForm", []).component("loginForm", {
   templateUrl: "./modules/login-form/login-form.template.html",
   controller: [
-    "$scope",
     "$timeout",
-    function ($scope, $timeout) {
-      $scope.submitting = false;
-      $scope.creds = {};
+    function ($timeout) {
+      this.submitting = false;
+      this.creds = {};
 
-      $scope.login = function () {
-        $scope.submitting = true;
-        $timeout(function () {
-          $scope.submitting = false;
-        }, 1000);
+      this.login = function () {
+        this.submitting = true;
+        $timeout(
+          function () {
+            this.submitting = false;
+          }.bind(this),
+          1000
+        );
       };
     },
   ],

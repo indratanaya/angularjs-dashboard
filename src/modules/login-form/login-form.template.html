@@ -2,7 +2,7 @@
   <div class="card-header">AngularJS Dashboard</div>
 
   <div class="card-body">
-    <form ng-submit="login()">
+    <form ng-submit="$ctrl.login()">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
         <input
@@ -10,8 +10,8 @@
           class="form-control"
           id="username"
           required
-          ng-model="creds.username"
-          ng-disabled="submitting"
+          ng-model="$ctrl.creds.username"
+          ng-disabled="$ctrl.submitting"
         />
       </div>
 
@@ -22,23 +22,23 @@
           class="form-control"
           id="password"
           required
-          ng-model="creds.password"
-          ng-disabled="submitting"
+          ng-model="$ctrl.creds.password"
+          ng-disabled="$ctrl.submitting"
         />
       </div>
 
       <button
         type="submit"
         class="btn btn-primary w-100"
-        ng-disabled="submitting"
+        ng-disabled="$ctrl.submitting"
       >
         <span
-          ng-if="submitting"
+          ng-if="$ctrl.submitting"
           class="spinner-border spinner-border-sm"
           role="status"
           aria-hidden="true"
         ></span>
-        {{submitting ? 'Loading...': 'Login'}}
+        {{$ctrl.submitting ? 'Loading...': 'Login'}}
       </button>
     </form>
   </div>
