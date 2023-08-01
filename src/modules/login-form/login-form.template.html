@@ -1,16 +1,45 @@
 <div class="card mx-3">
   <div class="card-header">AngularJS Dashboard</div>
+
   <div class="card-body">
-    <form>
+    <form ng-submit="login()">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
-        <input type="text" class="form-control" id="username" />
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          required
+          ng-model="creds.username"
+          ng-disabled="submitting"
+        />
       </div>
+
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" />
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          required
+          ng-model="creds.password"
+          ng-disabled="submitting"
+        />
       </div>
-      <button type="submit" class="btn btn-primary w-100">Login</button>
+
+      <button
+        type="submit"
+        class="btn btn-primary w-100"
+        ng-disabled="submitting"
+      >
+        <span
+          ng-if="submitting"
+          class="spinner-border spinner-border-sm"
+          role="status"
+          aria-hidden="true"
+        ></span>
+        {{submitting ? 'Loading...': 'Login'}}
+      </button>
     </form>
   </div>
 </div>
