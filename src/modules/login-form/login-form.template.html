@@ -44,6 +44,7 @@
           role="status"
           aria-hidden="true"
         ></span>
+        <i ng-if="!$ctrl.submitting" class="bi bi-box-arrow-in-right"></i>
         {{$ctrl.submitting ? 'Loading...': 'Login'}}
       </button>
     </form>
