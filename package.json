@@ -5,7 +5,7 @@
   "scripts": {
     "start": "http-server ./src -a localhost -p 3000 -c-1",
     "postinstall": "npm run copy-libs",
-    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist}/**/*\" src/lib -C"
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap-icons,bootstrap/dist}/**/*\" src/lib -C"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,8 @@
   "dependencies": {
     "angular": "^1.8.3",
     "angular-route": "^1.8.3",
-    "bootstrap": "^5.3.1"
+    "bootstrap": "^5.3.1",
+    "bootstrap-icons": "^1.10.5"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
